@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         navController = findNavController(R.id.nav_host_fragment)
         binding.bottomNavView.background = null
         binding.bottomNavView.menu.getItem(2).isEnabled = false
+        navController.navigate(R.id.splashScreenFragment)
 
         navController.addOnDestinationChangedListener{controller, destination, arguments ->
             if(destination.id == R.id.splashScreenFragment){
